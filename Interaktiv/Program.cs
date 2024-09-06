@@ -17,16 +17,16 @@ String ja = "ja";
 Console.WriteLine("Välkommen till mitt interaktiva spel!, för att säga ja, skriv ja, annars skriv vad som helst för nej"+"\n");
 
 Console.WriteLine("Du ser en dörr framför dig, gå du in, ja eller nej?");
-string RumAnswer = Console.ReadLine();
+string RumAnswer = Console.ReadLine().ToLower();
 if(RumAnswer==ja){
     Handlingar.öppnarDörrenBool = true;
     Handlingar.öppnarDörren();
     
-    string äppleAnswer = Console.ReadLine();
+    string äppleAnswer = Console.ReadLine().ToLower();
     if(äppleAnswer==ja){
         Handlingar.äterÄppletBool = true;
         Handlingar.äterÄpplet();
-        string answerToa = Console.ReadLine();
+        string answerToa = Console.ReadLine().ToLower();
 
         if(answerToa==ja){
             Handlingar.gårPåToaBool = true;
@@ -37,11 +37,11 @@ if(RumAnswer==ja){
 
     }else{
         Handlingar.äterÄpplet();
-        string springerAnswer = Console.ReadLine();
+        string springerAnswer = Console.ReadLine().ToLower();
         if(springerAnswer==ja){
             Handlingar.springerBool = true;
             Handlingar.springer();
-            string vevaAnswer = Console.ReadLine();
+            string vevaAnswer = Console.ReadLine().ToLower();
             if(vevaAnswer==ja){
                 Handlingar.vevaBool = true;
                 Handlingar.vevaMedKerem();
